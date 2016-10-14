@@ -1,44 +1,32 @@
-# Code Challenge
+# Code challenge
 
-## Why?
+## How to Deploy
 
-Code challenges are a fantastic way to figure out how you think and write code, with small, to-the-point projects.
+1. git clone repository
+2. Into directory  repo  write composer install  if you don't have composer install [here](https://getcomposer.org/)
+3. Copy .env.example to .env in file project
+4. create database example: "shorten" in your mysql client  and write in  .env  user, password, database and host database
+Example:
 
-## What?
 
-You are going to to be creating a link shortener. This link shortener must:
+APP_URL=http://yourdoamin
 
-1. Get a URL as an initial data.
-2. Shorten it and return the shortened URL to the user.
-3. Keep track of the shortened URL usage:
-  1. Keep a counter on how many times the URL has been used.
-  2. Record the IP address that called the URL, as well as the complete timestamp.
-4. Provide a very simple interface to visualize the statistics of each shortened URL.
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=shorten
+DB_USERNAME=userdb
+DB_PASSWORD=secret
 
-## How?
+5. Execute command "php artisan key:generate" then "php artisan migrate"
+6. For run server "php artisan serve"
 
-1. Fork this repository.
-2. Work in the project.
-3. When you are done, tag the source code as V1.0
-4. Let me know that you have finished!
 
-## With what?
+Use Laravel 5.3,required php version >= 5.6.9 and  MySQL 5.x
 
-1. Use any development language you want. Preferred are:
-  1. Ruby
-  2. Go
-  3. PHP
-  4. Python
-  5. Java
-  6. Javascript
-2. Use any framework and tools you want, as long as you can commit the necessary files.
+## Usage
 
-## Bonus points if you...
+- Go to [localhost:8000](localhost:8000)
+- Write URL large  and convert to shorten URL
 
-* Deploy your code to [Heroku](https://www.heroku.com/)
-* Provide good documentation
-* Finish your project in 3 hours or less
-
-## Last, but not least..
-
-Good luck!
+- For see stats Go to [localhost:8000/stats](localhost:8000/stats)
