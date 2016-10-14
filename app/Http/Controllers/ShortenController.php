@@ -73,6 +73,12 @@ class ShortenController extends Controller
         $data['stats_general'] = $shorts;
         $data['stats_detail'] = $history;
 
+        $data_shorts = ShortLink::select('code','count')->orderBy('count','desc')->limit(20)->get();
+        $arr = array();
+        foreach ($data_shorts->toArray() as $key => $value) {
+            $arr[] = array($value['code'],$value['count']);
+        }
+        $data['data_json'] = json_encode($arr);
         return view('stats',$data);
     }
 }
