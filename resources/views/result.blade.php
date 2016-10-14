@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1>Shorter URL </h1>
+                    <h1>Shorten you URL </h1>
                 </div>
             </div>
             <div class="row">
@@ -17,14 +17,14 @@
                     <div class="form-group row">
                       <label for="example-url-input" class="col-xs-3 col-form-label">Your shortened URL is:</label>
                       <div class="col-xs-7">
-                          <span>SHorten URL </span>
+                          <strong>{{ $url_shorten }}</strong>
                       </div>
 
                     </div>
                     <div class="form-group row">
                       <label for="example-url-input" class="col-xs-3 col-form-label">Your URL Website:</label>
                       <div class="col-xs-7">
-                          <span>Url regular</span>
+                          <span>{{ $url_original }}</span>
                       </div>
 
                     </div>

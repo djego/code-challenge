@@ -13,4 +13,10 @@
 
 
 Route::get('/','ShortenController@index');
+
 Route::post('/shorten_url','ShortenController@process');
+
+Route::get('/stats','ShortenController@stats');
+
+Route::get('/{code}','ShortenController@shortUrl');
+
